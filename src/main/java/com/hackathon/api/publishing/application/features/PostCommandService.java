@@ -6,6 +6,7 @@ import com.hackathon.api.publishing.domain.models.responses.PostResponse;
 import com.hackathon.api.publishing.domain.services.IPostCommandService;
 import com.hackathon.api.publishing.infrastructure.persistence.repositories.IPostRepository;
 import com.hackathon.api.publishing.infrastructure.persistence.repositories.ITagRepository;
+import com.hackathon.api.security.infrastructure.persistence.repositories.ICitizenRepository;
 import com.hackathon.api.shared.application.exceptions.NotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ public class PostCommandService implements IPostCommandService {
 
     @Autowired
     private ITagRepository tagRepository;
+
+    @Autowired
+    private ICitizenRepository citizenRepository;
 
     @Autowired
     private ModelMapper mapper;
@@ -34,6 +38,11 @@ public class PostCommandService implements IPostCommandService {
                 () -> new NotFoundException("Tag not found"));
 
         post.setTag(tagFound);
+
+        var citizenFound = citizenRepository.findById(command.getCitizenId()).orElseThrow(
+                () -> new NotFoundException("Citizen not found"));
+
+        post.setCitizen(citizenFound);
 
         var newPost = postRepository.save(post);
 

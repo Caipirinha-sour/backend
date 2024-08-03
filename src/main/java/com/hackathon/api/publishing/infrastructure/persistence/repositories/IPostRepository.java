@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface IPostRepository extends JpaRepository<Post, Long> {
     List<Post> findByTagId(Long tagId);
+    List<Post> findByCitizenId(Long citizenId);
 }

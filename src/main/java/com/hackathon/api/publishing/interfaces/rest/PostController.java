@@ -3,6 +3,7 @@ package com.hackathon.api.publishing.interfaces.rest;
 import com.hackathon.api.publishing.domain.models.commands.CreatePostCommand;
 import com.hackathon.api.publishing.domain.models.queries.GetAllPostsQuery;
 import com.hackathon.api.publishing.domain.models.queries.GetPostByIdQuery;
+import com.hackathon.api.publishing.domain.models.queries.GetPostsByCitizenIdQuery;
 import com.hackathon.api.publishing.domain.models.queries.GetPostsByTagIdQuery;
 import com.hackathon.api.publishing.domain.models.responses.PostResponse;
 import com.hackathon.api.publishing.domain.services.IPostCommandService;
@@ -41,6 +42,13 @@ public class PostController {
     @GetMapping("/tag/{tagId}")
     public ResponseEntity<List<PostResponse>> getPostsByTagId(@PathVariable Long tagId) {
         var query = new GetPostsByTagIdQuery(tagId);
+        var posts = postQueryService.handle(query);
+        return ResponseEntity.ok(posts);
+    }
+
+    @GetMapping("/user/{citizenId}")
+    public ResponseEntity<List<PostResponse>> getPostsByCitizenId(@PathVariable Long citizenId) {
+        var query = new GetPostsByCitizenIdQuery(citizenId);
         var posts = postQueryService.handle(query);
         return ResponseEntity.ok(posts);
     }
