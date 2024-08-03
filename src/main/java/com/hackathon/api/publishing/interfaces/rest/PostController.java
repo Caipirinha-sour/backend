@@ -7,6 +7,7 @@ import com.hackathon.api.publishing.domain.models.queries.GetPostsByTagIdQuery;
 import com.hackathon.api.publishing.domain.models.responses.PostResponse;
 import com.hackathon.api.publishing.domain.services.IPostCommandService;
 import com.hackathon.api.publishing.domain.services.IPostQueryService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -46,7 +47,7 @@ public class PostController {
 
     @PostMapping
     public ResponseEntity<PostResponse> createPost(
-            @RequestBody CreatePostCommand command
+            @Valid @RequestBody CreatePostCommand command
     )
     {
         var postResponse = postCommandService.handle(command);
