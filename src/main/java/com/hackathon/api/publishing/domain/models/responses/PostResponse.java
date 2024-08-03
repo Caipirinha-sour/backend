@@ -1,6 +1,7 @@
 package com.hackathon.api.publishing.domain.models.responses;
 
 
+import com.hackathon.api.security.domain.models.responses.CitizenResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,4 +17,5 @@ public class PostResponse {
     private String mediaUrl;
     private Date createdAt;
     private TagResponse tag;
+    private CitizenResponse citizen;
 }

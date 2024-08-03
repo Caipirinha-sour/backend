@@ -12,11 +12,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CreatePostCommand {
     @NotEmpty(message = "Title may not be empty")
-    @Size(min=4, max=16, message = "Title must be between 4 and 32 characters long")
+    @Size(min=0, max=255, message = "Title must be between 0 and 255 characters long")
     private String text;
 
     private String mediaUrl;
 
-    @Positive(message = "User ID must be a positive integer")
+    @Positive(message = "Tag ID must be a positive integer")
     private Long tagId;
+
+    @Positive(message = "Citizen ID must be a positive integer")
+    private Long citizenId;
 }
