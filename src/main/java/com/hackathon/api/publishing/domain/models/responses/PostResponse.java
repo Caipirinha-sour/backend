@@ -16,6 +16,7 @@ public class PostResponse {
     private String text;
     private String mediaUrl;
     private Date createdAt;
+    private int totalRating;
     private TagResponse tag;
     private CitizenResponse citizen;
 }

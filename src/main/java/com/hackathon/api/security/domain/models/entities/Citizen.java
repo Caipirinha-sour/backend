@@ -1,6 +1,5 @@
 package com.hackathon.api.security.domain.models.entities;
 
-import com.hackathon.api.publishing.domain.models.aggregates.Post;
 import com.hackathon.api.shared.domain.models.entities.BaseDomainModel;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -9,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
 
 @Entity
 @Table(name = "citizens")
