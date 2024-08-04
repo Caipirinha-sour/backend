@@ -31,4 +31,5 @@ public class CreateVolunteerCommand {
     @NotEmpty(message = "Requirements are required")
     @Size(min = 3, max = 256, message = "Requirements must be between 3 and 256 characters")
     private String requirements;
+
 }

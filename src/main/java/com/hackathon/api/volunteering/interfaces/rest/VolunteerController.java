@@ -2,6 +2,7 @@ package com.hackathon.api.volunteering.interfaces.rest;
 
 import com.hackathon.api.volunteering.application.features.VolunteerCommandService;
 import com.hackathon.api.volunteering.application.features.VolunteerQueryService;
+import com.hackathon.api.volunteering.domain.models.commands.CreateRegistrationCitizenCommand;
 import com.hackathon.api.volunteering.domain.models.commands.CreateVolunteerCommand;
 import com.hackathon.api.volunteering.domain.models.queries.GetAllVolunteersQuery;
 import com.hackathon.api.volunteering.domain.models.queries.GetVolunteerByIdQuery;
@@ -43,5 +44,14 @@ public class VolunteerController {
     {
         var volunteer = volunteerCommandService.createVolunteer(command);
         return ResponseEntity.ok(volunteer);
+    }
+
+    @PostMapping("/registration")
+    public ResponseEntity<?> createRegistrationCitizen(
+            @Valid @RequestBody CreateRegistrationCitizenCommand command
+    )
+    {
+        volunteerCommandService.createRegistrationCitizen(command);
+        return ResponseEntity.ok().build();
     }
 }
