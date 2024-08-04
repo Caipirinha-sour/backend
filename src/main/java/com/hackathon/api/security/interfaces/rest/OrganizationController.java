@@ -6,15 +6,13 @@ import com.hackathon.api.security.domain.models.responses.OrganizationResponse;
 import com.hackathon.api.security.domain.services.IOrganizationQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/organizations")
+@CrossOrigin(origins = "*")
 public class OrganizationController {
     @Autowired
     private IOrganizationQueryService organizationQueryService;

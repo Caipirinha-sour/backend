@@ -6,13 +6,11 @@ import com.hackathon.api.security.domain.services.ICitizenCommandService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/api/v1/citizens")
+@CrossOrigin(origins = "*")
 public class CitizenController {
     @Autowired
     private ICitizenCommandService citizenCommandService;

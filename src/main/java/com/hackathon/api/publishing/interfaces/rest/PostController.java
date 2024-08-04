@@ -18,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/posts")
+@CrossOrigin(origins = "*")
 public class PostController {
     @Autowired
     private IPostQueryService postQueryService;
