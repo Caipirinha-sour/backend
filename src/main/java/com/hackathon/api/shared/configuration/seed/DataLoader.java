@@ -47,36 +47,36 @@ public class DataLoader implements CommandLineRunner {
 
         List<Organization> organizations = List.of(
                 new Organization(
-                        "helpingHands",
+                        "UrbanResilience Fund",
                         "password123",
                         "contact@helpinghands.org",
                         "https://drive.google.com/file/d/1z2okf6cPTJg8Ioat20UV4Gb9PrQohekb/view",
-                        "We provide aid and resources to those in need.",
-                        "123-456-7890"
+                        "Families affected by the El Niño phenomenon",
+                        "(+51) 1 345 6789"
                 ),
                 new Organization(
-                        "safeHarbor",
+                        "GreenEarth Foundation",
                         "securePass456",
                         "info@safeharbor.org",
                         "https://drive.google.com/file/d/1Mfar5-trpeh2P_f5Ul5N9IpNjgiL-8IP/view",
-                        "Offering shelter and support to displaced families.",
-                        "987-654-3210"
+                        "Reforestation and conservation of tropical forests",
+                        "(+51) 1 234 5678"
                 ),
                 new Organization(
-                        "greenEarth",
+                        "ClimateAction Network",
                         "ecoFriendly789",
                         "support@greenearth.org",
                         "https://drive.google.com/file/d/1zqeALkrKkeg6js6iMqTAQHkSVh7uzGF0/view",
-                        "Promoting environmental sustainability and conservation.",
-                        "555-123-4567"
+                        "Funding for renewable energy projects in rural communities",
+                        "(+55) 21 2345 6789"
                 ),
                 new Organization(
-                        "careAndCure",
+                        "Relief Network USA",
                         "healing1234",
                         "contact@careandcure.org",
                         "https://drive.google.com/file/d/1YC7UPeemCYOM_69DY6lcKwW38rHno_aL/view",
-                        "Providing medical aid and health resources to communities.",
-                        "444-555-6666"
+                        "Emergency relief and disaster reconstruction assistance",
+                        "(+1) 800-555-0199"
                 )
         );
 
