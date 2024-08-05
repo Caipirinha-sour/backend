@@ -34,7 +34,7 @@ public class DataLoader implements CommandLineRunner {
         "MaryJenn",
         "password123",
             "mary.jenn@test.com",
-        "https://icons.iconarchive.com/icons/iconarchive/robot-avatar/256/Yellow-5-Minion-icon.png"
+        "https://avatars.githubusercontent.com/u/97687796?v=4"
         ));
     }
 
@@ -50,7 +50,7 @@ public class DataLoader implements CommandLineRunner {
                         "helpingHands",
                         "password123",
                         "contact@helpinghands.org",
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4RgnchbxNejUMFZGB3r1aIy04rL49oq8eCw&s",
+                        "https://drive.google.com/file/d/1z2okf6cPTJg8Ioat20UV4Gb9PrQohekb/view",
                         "We provide aid and resources to those in need.",
                         "123-456-7890"
                 ),
@@ -58,7 +58,7 @@ public class DataLoader implements CommandLineRunner {
                         "safeHarbor",
                         "securePass456",
                         "info@safeharbor.org",
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4RgnchbxNejUMFZGB3r1aIy04rL49oq8eCw&s",
+                        "https://drive.google.com/file/d/1Mfar5-trpeh2P_f5Ul5N9IpNjgiL-8IP/view",
                         "Offering shelter and support to displaced families.",
                         "987-654-3210"
                 ),
@@ -66,7 +66,7 @@ public class DataLoader implements CommandLineRunner {
                         "greenEarth",
                         "ecoFriendly789",
                         "support@greenearth.org",
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4RgnchbxNejUMFZGB3r1aIy04rL49oq8eCw&s",
+                        "https://drive.google.com/file/d/1zqeALkrKkeg6js6iMqTAQHkSVh7uzGF0/view",
                         "Promoting environmental sustainability and conservation.",
                         "555-123-4567"
                 ),
@@ -74,7 +74,7 @@ public class DataLoader implements CommandLineRunner {
                         "careAndCure",
                         "healing1234",
                         "contact@careandcure.org",
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4RgnchbxNejUMFZGB3r1aIy04rL49oq8eCw&s",
+                        "https://drive.google.com/file/d/1YC7UPeemCYOM_69DY6lcKwW38rHno_aL/view",
                         "Providing medical aid and health resources to communities.",
                         "444-555-6666"
                 )
